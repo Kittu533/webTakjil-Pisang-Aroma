@@ -1,0 +1,269 @@
+:root {
+  --red-orange-crayola: hsl(0, 100%, 66%);
+  --space-cadet: hsl(249, 37%, 19%);
+  --pistachio: hsl(88, 50%, 60%);
+  --cultured: hsl(220, 13%, 95%);
+  --saffron: hsl(45, 91%, 58%);
+  --rhythm: hsl(240, 9%, 51%);
+  --white: hsl(0, 0%, 100%);
+
+  --fs-1: 46px;
+  --fs-2: 28px;
+  --fs-3: 18px;
+  --fs-4: 15px;
+  --fs-5: 14px;
+
+  /**
+     * spacing 
+     */
+
+  --px: 30px;
+  --py: 60px;
+
+  /**
+     * others 
+     */
+
+  --default-transition: 0.75s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-offset: 5px;
+  scroll-behavior: smooth;
+}
+li {
+  list-style: none;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+img,
+svg,
+ion-icon,
+span,
+button {
+  display: block;
+}
+html {
+  font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  height: 55px;
+  padding: 0 25px;
+  color: var(--space-cadet);
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--default-transition);
+}
+
+.btn:hover {
+  filter: saturate(1.05) brightness(1.05);
+}
+
+.btn-primary {
+  background: var(--saffron);
+}
+
+.btn-secondary {
+  background: var(--cultured);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container {
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  background: var(--white);
+  overflow: hidden;
+}
+
+/* Header */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 20px 30px;
+  background: hsla(0, 0%, 100%, 0.99);
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.05);
+  z-index: 5;
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-nav li {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 32px;
+}
+.navbar-nav li:last-child {
+  margin-right: 0;
+}
+.nav-link {
+  color: black;
+}
+.nav-link:hover {
+  color: hsl(0, 100%, 66%);
+  transition: ease-in 0.3s;
+}
+/* End Header */
+
+/* Home */
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 150px var(--px) var(--py);
+}
+
+.home-left {
+  position: relative;
+  text-align: center;
+  aspect-ratio: unset;
+}
+.home-subtext {
+  background: var(--cultured);
+  color: var(--space-cadet);
+  font-size: 13px;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 30px;
+}
+
+.main-heading {
+  color: var(--space-cadet);
+  font-size: var(--fs-1);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+.home-text {
+  color: var(--rhythm);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.video-bg {
+  width: 100%;
+  border-radius: 32px;
+}
+.home-right > button {
+  margin-top: 32px;
+  margin-left: 37%;
+}
+/* End Home */
+
+/* About */
+
+.about-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 72px;
+}
+.about-img {
+  width: 612px;
+  border-radius: 32px;
+  margin-left: 72px;
+}
+.about-item-detail {
+  text-align: justify;
+}
+.about-item-detail p {
+  margin-right: 32px;
+}
+.about-item-detail h1 {
+  font-size: 42px;
+  margin-bottom: 24px;
+  margin-right: 32px;
+  color: var(--space-cadet);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* End About */
+/* resep */
+.resep-detail {
+  margin-top: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+.resep-detail-item img {
+  margin-left: 72px;
+  width: 612px;
+  border-radius: 32px;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container > h1 {
+  font-size: 42px;
+  margin-bottom: 24px;
+  margin-right: 32px;
+  color: var(--space-cadet);
+  font-weight: 700;
+  text-align: center;
+}
+.recipe {
+  margin-top: 32px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.article {
+  padding: 32px;
+}
+
+.recipe h2 {
+  color: #333;
+}
+
+.recipe ul,
+.recipe ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe ul li,
+.recipe ol li {
+  line-height: 1.6;
+}
+
+.recipe ol {
+  list-style-type: decimal;
+}
